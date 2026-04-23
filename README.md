@@ -4,13 +4,12 @@
 
 1. [Tổng Quan](#1-tổng-quan)
 2. [Nguyên Lý Hoạt Động](#2-nguyên-lý-hoạt-động)
-3. [Các Bước Thực Hiện](#3-các-bước-thực-hiện)
-4. [Thư Viện Và Dịch Vụ](#4-thư-viện-và-dịch-vụ)
-5. [Cấu Trúc Thư Mục](#5-cấu-trúc-thư-mục)
-6. [Hướng Dẫn Chạy](#6-hướng-dẫn-chạy)
-7. [Cách Sử Dụng Giao Diện](#7-cách-sử-dụng-giao-diện)
-8. [Tùy Chỉnh Nâng Cao](#8-tùy-chỉnh-nâng-cao)
-9. [Ví Dụ Sử Dụng](#9-ví-dụ-sử-dụng)
+3. [Thư Viện Và Dịch Vụ](#4-thư-viện-và-dịch-vụ)
+4. [Cấu Trúc Thư Mục](#5-cấu-trúc-thư-mục)
+5. [Hướng Dẫn Chạy](#6-hướng-dẫn-chạy)
+6. [Cách Sử Dụng Giao Diện](#7-cách-sử-dụng-giao-diện)
+7. [Tùy Chỉnh Nâng Cao](#8-tùy-chỉnh-nâng-cao)
+8. [Ví Dụ Sử Dụng](#9-ví-dụ-sử-dụng)
 
 ---
 
@@ -88,9 +87,9 @@ OUTPUT: EMAIL DIGEST JSON
 
 ---
 
-## 4. THƯ VIỆN VÀ DỊCH VỤ
+## 3. THƯ VIỆN VÀ DỊCH VỤ
 
-### 4.1 Công Nghệ Chính
+### 3.1 Công Nghệ Chính
 
 | Công Nghệ | Phiên Bản | Mục Đích |
 |-----------|-----------|---------|
@@ -102,12 +101,12 @@ OUTPUT: EMAIL DIGEST JSON
 | Docker | Latest | Container orchestration |
 | Requests | Latest | HTTP client giữa services |
 
-### 4.2 Dịch Vụ Ngoài
+### 3.2 Dịch Vụ Ngoài
 
 - **🔵 OpenAI API**: Cung cấp gpt-4o cho AI agents
 - **🟢 Docker**: Container cho toàn bộ services
 
-### 4.3 File requirements.txt
+### 3.3 File requirements.txt
 
 ```
 fastapi
@@ -122,7 +121,7 @@ pandas
 
 ---
 
-## 5. CẤU TRÚC THƯ MỤC
+## 4. CẤU TRÚC THƯ MỤC
 
 ```
 demo/
@@ -175,7 +174,7 @@ demo/
 
 ---
 
-## 6. HƯỚNG DẪN CHẠY
+## 5. HƯỚNG DẪN CHẠY
 
 ### Bước 1: Clone Repository
 
@@ -223,9 +222,9 @@ Services sẽ chạy ở:
 
 ---
 
-## 7. CÁCH SỬ DỤNG GIAO DIỆN
+## 6. CÁCH SỬ DỤNG GIAO DIỆN
 
-### 7.1 Input Section
+### 6.1 Input Section
 
 **Bước 1**: Paste emails (JSON array):
 
@@ -251,13 +250,13 @@ Services sẽ chạy ở:
 
 **Bước 3**: (Optional) Click "👁️ Show Email Preview"
 
-### 7.2 Processing Section
+### 6.2 Processing Section
 
 **Click button**: "🚀 Process Emails"
 
 **Xem real-time progress** của mỗi stage
 
-### 7.3 Results Section
+### 6.3 Results Section
 
 Sau processing hoàn tất:
 
@@ -313,9 +312,9 @@ Priority Arguments:
 
 ---
 
-## 9. TÙY CHỈNH NÂNG CAO
+## 7. TÙY CHỈNH NÂNG CAO
 
-### 9.1 Tùy Chỉnh Summarizer Prompt
+### 7.1 Tùy Chỉnh Summarizer Prompt
 
 File: `agents/summarizer/summarizer.py`
 
@@ -329,7 +328,7 @@ Tóm tắt bằng tiếng Việt:
 """
 ```
 
-### 9.2 Tùy Chỉnh Prioritizer Prompt
+### 7.2 Tùy Chỉnh Prioritizer Prompt
 
 File: `agents/prioritizer/prioritizer.py`
 
@@ -341,13 +340,13 @@ Cung cấp: Lý do + Debate arguments
 """
 ```
 
-### 9.3 Tùy Chỉnh Sample Emails
+### 7.3 Tùy Chỉnh Sample Emails
 
 File: `data/sample_emails.json`
 
 Thêm/xóa/sửa emails tùy ý
 
-### 9.4 Tùy Chỉnh Model
+### 7.4 Tùy Chỉnh Model
 
 File: `.env`
 
@@ -357,7 +356,7 @@ OPENAI_MODEL=gpt-3.5-turbo
 
 ---
 
-## 10. VÍ DỤ SỬ DỤNG
+## 8. VÍ DỤ SỬ DỤNG
 
 ### Kịch Bản Thực Tế
 
