@@ -4,12 +4,12 @@
 
 1. [Tổng Quan](#1-tổng-quan)
 2. [Nguyên Lý Hoạt Động](#2-nguyên-lý-hoạt-động)
-3. [Thư Viện Và Dịch Vụ](#4-thư-viện-và-dịch-vụ)
-4. [Cấu Trúc Thư Mục](#5-cấu-trúc-thư-mục)
-5. [Hướng Dẫn Chạy](#6-hướng-dẫn-chạy)
-6. [Cách Sử Dụng Giao Diện](#7-cách-sử-dụng-giao-diện)
-7. [Tùy Chỉnh Nâng Cao](#8-tùy-chỉnh-nâng-cao)
-8. [Ví Dụ Sử Dụng](#9-ví-dụ-sử-dụng)
+3. [Thư Viện Và Dịch Vụ](#3-thư-viện-và-dịch-vụ)
+4. [Cấu Trúc Thư Mục](#4-cấu-trúc-thư-mục)
+5. [Hướng Dẫn Chạy](#5-hướng-dẫn-chạy)
+6. [Cách Sử Dụng Giao Diện](#6-cách-sử-dụng-giao-diện)
+7. [Tùy Chỉnh Nâng Cao](#7-tùy-chỉnh-nâng-cao)
+8. [Ví Dụ Sử Dụng](#8-ví-dụ-sử-dụng)
 
 ---
 
