@@ -178,10 +178,6 @@ demo/
 
 ### Bước 1: Clone Repository
 
-```bash
-cd demo
-```
-
 ### Bước 2: Thiết Lập API Key
 
 ```bash
