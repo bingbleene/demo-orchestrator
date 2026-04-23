@@ -1,0 +1,98 @@
+services:
+  summarizer:
+    build:
+      context: .
+      dockerfile: agents/Dockerfile
+      args:
+        AGENT_NAME: summarizer
+        PORT: 8002
+    container_name: email-summarizer
+    ports:
+      - "8002:8002"
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MODEL_NAME=${MODEL_NAME:-gpt-4}
+    networks:
+      - email-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8002/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  prioritizer:
+    build:
+      context: .
+      dockerfile: agents/Dockerfile
+      args:
+        AGENT_NAME: prioritizer
+        PORT: 8003
+    container_name: email-prioritizer
+    ports:
+      - "8003:8003"
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MODEL_NAME=${MODEL_NAME:-gpt-4}
+    networks:
+      - email-network
+    depends_on:
+      - summarizer
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8003/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  orchestrator:
+    build:
+      context: .
+      dockerfile: orchestrator/Dockerfile
+    container_name: email-orchestrator
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MODEL_NAME=${MODEL_NAME:-gpt-4}
+      - SUMMARIZER_HOST=summarizer
+      - PRIORITIZER_HOST=prioritizer
+    networks:
+      - email-network
+    depends_on:
+      - summarizer
+      - prioritizer
+    volumes:
+      - ./output:/app/output
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: streamlit/Dockerfile
+    container_name: email-streamlit-ui
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app
+      - ORCHESTRATOR_URL=http://orchestrator:8000
+    networks:
+      - email-network
+    depends_on:
+      - orchestrator
+
+networks:
+  email-network:
+    driver: bridge
+
+volumes:
+  output:
+    driver: local

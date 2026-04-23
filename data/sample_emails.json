@@ -1,0 +1,32 @@
+[
+  {
+    "sender": "john.doe@company.com",
+    "subject": "KHẨN: Thời hạn giáp deadline dự án chuyển sang thứ Năm",
+    "body": "Xin chào các bạn,\n\nDo yêu cầu thay đổi từ phía khách hàng, thời hạn báo cáo quý này đã được đẩy sớm lên cuối ngày thứ Năm thay vì Thứ Hai tuần sau.\n\nVui lòng điều chỉnh lịch trình của các bạn cho phù hợp. Hãy thông báo cho tôi nếu có bất kỳ trở ngại nào.\n\nTrân trọng,\nJohn Doe\nQuản lý Dự án",
+    "timestamp": "2024-04-09T09:15:00Z"
+  },
+  {
+    "sender": "hr@company.com",
+    "subject": "Lịch đánh giá hiệu suất Q2",
+    "body": "Các trưởng bộ phận,\n\nĐánh giá hiệu suất Q2 sẽ tiến hành từ ngày 20-30 tháng 4. Vui lòng lên lịch họp 1:1 với mỗi nhân viên trực tiếp.\n\nBạn có thể tìm thấy mẫu đánh giá trong thư mục dùng chung.\n\nTrân trọng,\nBộ phận Nhân sự",
+    "timestamp": "2024-04-09T08:30:00Z"
+  },
+  {
+    "sender": "sarah.smith@company.com",
+    "subject": "Cần review code cho PR #456",
+    "body": "Xin chào các bạn,\n\nTôi đã gửi PR #456 để cải tổ mô-đun xác thực. Đây là thành phần quan trọng nên review kỹ lưỡng sẽ được đánh giá cao.\n\nPR bao gồm:\n- Logic xác thực token mới\n- Cập nhật các tiêu đề bảo mật\n- Các bài kiểm tra đơn vị toàn diện\n\nVui lòng review và để lại nhận xét.\n\nCảm ơn,\nSarah Smith",
+    "timestamp": "2024-04-09T10:45:00Z"
+  },
+  {
+    "sender": "alice.johnson@company.com",
+    "subject": "Re: Phê duyệt ngân sách QII",
+    "body": "Xin chào,\n\nTin vui! Yêu cầu ngân sách QII của bạn với số tiền 50.000 USD đã được phê duyệt bởi bộ phận tài chính.\n\nBạn có thể tiến hành các sáng kiến được lên kế hoạch.\n\nVui lòng liên hệ với tôi nếu bạn cần bất kỳ phê duyệt nào khác.\n\nTrân trọng,\nAlice Johnson\nGiám đốc Tài chính",
+    "timestamp": "2024-04-09T11:20:00Z"
+  },
+  {
+    "sender": "marketing@company.com",
+    "subject": "Khởi động chiến dịch ra mắt sản phẩm mới",
+    "body": "Chiến dịch ra mắt sản phẩm sẽ chính thức bắt đầu vào tuần tới!\n\nLịch trình:\n- Tuần 1: Chuẩn bị nội bộ\n- Tuần 2: Ra mắt beta cho người dùng được chọn lọc\n- Tuần 3: Ra mắt công khai đầy đủ\n\nTất cả các bộ phận cần phối hợp. Vui lòng tham dự cuộc họp khởi động vào Thứ Hai lúc 10 sáng.\n\nChitiết nằm trong lời mời lịch.\n\nCảm ơn,\nBộ phận Marketing",
+    "timestamp": "2024-04-09T14:00:00Z"
+  }
+]
