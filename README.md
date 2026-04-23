@@ -204,14 +204,8 @@ OPENAI_MODEL=gpt-4o
 ### Bước 3: Khởi Động Services (Docker)
 
 ```bash
-# Build + start tất cả containers
-docker compose up 
-
-# Kiểm tra status
-docker compose ps
-
-# Xem logs
-docker compose logs -f
+docker compose build --no-cache
+docker compose up
 ```
 
 Services sẽ chạy ở:
@@ -220,6 +214,11 @@ Services sẽ chạy ở:
 - ⚙️ **Summarizer**: http://localhost:8002
 - ⭐ **Prioritizer**: http://localhost:8003
 
+### Bước 4: Dừng chương trình
+- Ctrl + C hoặc dừng terminal
+```bash
+docker compose down
+```
 ---
 
 ## 6. CÁCH SỬ DỤNG GIAO DIỆN
